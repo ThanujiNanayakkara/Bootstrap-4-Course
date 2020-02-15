@@ -48,6 +48,7 @@
 
 .carousel {
     background: #512DA8;
+   
 }
 
 .carousel-item{
@@ -67,4 +68,11 @@
     top: 50%;
 transform: translateY(-50%);
 bottom: initial;
+}
+
+#carouselButton{
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
 }
