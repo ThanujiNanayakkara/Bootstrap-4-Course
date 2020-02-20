@@ -30,9 +30,12 @@
                 <li class="nav-item"> <a class="nav-link" href ="./contactus.html"><span class="fa fa-address-card fa-lg"></span>Contact</a></li>
             </ul>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal">
+                <a id="login">
                     <span class="fa fa-sign-in"></span>Login
                 </a>
+                <!--<a data-toggle="modal" data-target="#loginModal">
+                    <span class="fa fa-sign-in"></span>Login
+                </a>-->
             </span>
         </div> 
     </div>
@@ -168,9 +171,12 @@
                     <!--<a class="btn btn-warning btn-block nav-link" data-toggle="tooltip" data-html="true"
                     title="Or call us at <br><strong>+852 12345678</strong>" data-placement="bottom"
                     href="#form" role="button">Reserve Table</a> -->
-                    <a class="btn btn-warning btn-block nav-link" data-toggle="modal" data-target="#reserveModal">
+                    <a class="btn btn-warning btn-block nav-link" id="reserve">
                         Reserve Table
                     </a> 
+                    <!--<a class="btn btn-warning btn-block nav-link" data-toggle="modal" data-target="#reserveModal">
+                        Reserve Table
+                    </a>-->
                 </div>
             </div>
         </div>
@@ -247,10 +253,10 @@
                 <div class="media">
                     <img class= "d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="uthappizza">
                     <div class="media-body">
-                        <h2 class="meida heading mt-0">
+                        <h2 class="media heading mt-0">
                             Uthappizza
-                            <span class="badge badge-danger">HOT</span>
-                            <span class="badge badge-pill badge-secondary">$4.99</span>
+                            <span class="badge badge-danger ml-1">HOT</span>
+                            <span class="badge badge-pill badge-secondary ml-1">$4.99</span>
                         </h2>
                         <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                     </div>
@@ -267,9 +273,9 @@
             <div class= " col col-sm col-md align-items-center">
                     <div class="media">
                         <div class="media-body ">
-                            <h2 class="meida heading mt-0">
+                            <h2 class="media heading mt-0">
                                 Weekend Grand Buffet
-                                <span class="badge badge-danger">NEW</span>
+                                <span class="badge badge-danger ml-1">NEW</span>
                             </h2>
                             <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                         </div>
@@ -426,8 +432,15 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
+        $("#reserve").click(function(){
+            $('#reserveModal').modal('show');
+        });
+        $("#login").click(function(){
+            $('#loginModal').modal('show');
+        });
     });
 </script>
+
  <!--<script>
      $(document).ready(function() {
          $('[data-toggle="tooltip"]').tooltip();
